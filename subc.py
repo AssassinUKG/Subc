@@ -6,6 +6,8 @@ from urllib3 import exceptions
 import gc
 import signal
 
+
+
 ##################################################
 # Created by Richard Jones @defencelogic.io      #
 # Date: 31/01/2023                               #
@@ -47,6 +49,16 @@ def main():
     args = parser.parse_args()
     THREAD_LIMITER = threading.BoundedSemaphore(value=args.threads)
 
+    if not __import__("sys").stdout.isatty():
+        for _ in dir():
+            if isinstance(_, str) and _[0] != "_":
+                locals()[_] = ""
+    else:
+        # set Windows console in VT mode
+        if __import__("platform").system() == "Windows":
+            kernel32 = __import__("ctypes").windll.kernel32
+            kernel32.SetConsoleMode(kernel32.GetStdHandle(-11), 7)
+            del kernel32
 
     banner = """\n #####         ##       ####
 ##   ##        ##      ##  ##
