@@ -1,4 +1,6 @@
-![image](https://user-images.githubusercontent.com/5285547/215763561-de33d4f6-3149-463a-8143-62137938902a.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/5285547/215763561-de33d4f6-3149-463a-8143-62137938902a.png" alt="Sublime's custom image"/>
+</p>
 
 ## Video 
 (Click to goto YouTube.com)
