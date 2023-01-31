@@ -16,6 +16,22 @@ pip install -r requirements.txt
 
 ## Usage
 
+```sh
+usage: subc.py [-h] -d DOMAIN -w WORDLIST [-o OUTPUT] [-t THREADS] [-s]
+
+options:
+  -h, --help            show this help message and exit
+  -d DOMAIN, --domain DOMAIN
+                        Domain to brute force
+  -w WORDLIST, --wordlist WORDLIST
+                        DNS wordlist to use
+  -o OUTPUT, --output OUTPUT
+                        Output file to save the results to
+  -t THREADS, --threads THREADS
+                        Number of threads to use (Default: 80)
+  -s, --silent          Silent mode - Hide all output, except domains
+```
+
 Normal usage
 ```sh
 python3 subc.py -d tesla.com -w /usr/share/seclists/Discovery/DNS/deepmagic.com-prefixes-top50000.txt -o results.txt
